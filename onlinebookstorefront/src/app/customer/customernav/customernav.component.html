@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+    <div class="container-fluid">
+        <!-- Left side: Greeting, Cart, and Order History -->
+        <div class="d-flex align-items-center">
+            <span class="navbar-text text-light me-4">Hello, {{ customerName }}</span>
+            <button class="btn btn-primary me-2" [routerLink]="['/customer/cart', userId]">Cart</button>
+            <button class="btn btn-success me-2" [routerLink]="['/customer/order-history', userId]">Order History</button>
+        </div>
+
+        <!-- Right side: Logout Button -->
+        <div class="d-flex ms-auto">
+            <button class="btn btn-danger" (click)="logout()">Logout</button>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,33 @@
+<app-customernav></app-customernav>
+
+<div class="container mt-4">
+    <h2>Welcome, {{ customerName }}!</h2>
+    <h3>Available Books</h3>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let book of paginatedBooks">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ book.title }}</h5>
+                    <p class="card-text">Author: {{ book.author }}</p>
+                    <p class="card-text">Genre: {{ book.genre }}</p>
+                    <p class="card-text">Price: ${{ book.price }}</p>
+                    <button class="btn btn-primary" (click)="viewBookDetails(book.id)">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagination Controls -->
+    <div class="d-flex justify-content-between mt-4">
+        <button class="btn btn-outline-primary" (click)="prevPage()" [disabled]="currentPage === 1">
+            Previous
+        </button>
+        <span>Page {{ currentPage }} of {{ getTotalPages() }}</span> <!-- Fixed here -->
+        <button class="btn btn-outline-primary" (click)="nextPage()" 
+                [disabled]="currentPage >= getTotalPages()">
+            Next
+        </button>
+    </div>
+</div>

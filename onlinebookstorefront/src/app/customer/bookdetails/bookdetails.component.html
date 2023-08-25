@@ -1,0 +1,33 @@
+<!-- <p>bookdetails works!</p> -->
+<app-customernav></app-customernav> 
+<div class="container mt-5 book-details-container" *ngIf="!isLoading; else loading">
+    <div class="row">
+      <div class="col-md-3">
+        <img [src]="'assets/books.jpg'" alt="Book image" class="book-image">
+      </div>
+      <div class="col-md-6">
+        <h2>{{ book.title }}</h2>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Genre:</strong> {{ book.genre }}</p>
+        <p><strong>Price:</strong> ${{ book.price }}</p>
+        <p><strong>Publication Date:</strong> {{ book.publication_date | date }}</p>
+        <p><strong>Bookstore ID:</strong> {{ book.bookstore_id }}</p>
+  
+        <button class="btn btn-primary me-2" (click)="addToCart()">Add to Cart</button>
+        <button class="btn btn-success" (click)="placeOrder()">Place Order</button>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #loading>
+    <div class="d-flex justify-content-center mt-5">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </ng-template>
+  
+  <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+    {{ errorMessage }}
+  </div>
+  

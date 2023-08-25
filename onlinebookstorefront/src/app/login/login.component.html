@@ -1,0 +1,59 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title text-center">Login</h3>
+            
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  id="email"
+                  formControlName="email"
+                  type="email"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': loginForm.controls['email'].invalid && loginForm.controls['email'].touched }"
+                  required
+                />
+                <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched" class="invalid-feedback">
+                  Please enter a valid email.
+                </div>
+              </div>
+  
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  id="password"
+                  formControlName="password"
+                  type="password"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': loginForm.controls['password'].invalid && loginForm.controls['password'].touched }"
+                  required
+                />
+                <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched" class="invalid-feedback">
+                  Please enter your password (at least 6 characters).
+                </div>
+              </div>
+  
+              <div class="mb-3">
+                <button type="submit" class="btn btn-primary" [disabled]="isSubmitting">
+                  <span *ngIf="isSubmitting">Logging in...</span>
+                  <span *ngIf="!isSubmitting">Login</span>
+                </button>
+              </div>
+  
+              <div *ngIf="errorMessage" class="alert alert-danger">
+                {{ errorMessage }}
+              </div>
+            </form>
+  
+            <div class="text-center mt-3">
+              <p>Want to register as a Customer or Bookstore Owner? <a routerLink="/register">Click here</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

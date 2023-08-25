@@ -1,0 +1,28 @@
+<app-bookstorenav></app-bookstorenav>
+<div class="container mt-4">
+    <h2>Add New Book</h2>
+    <form (submit)="addBook()">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" [(ngModel)]="book.title" name="title" required>
+        </div>
+        <div class="mb-3">
+            <label for="author" class="form-label">Author</label>
+            <input type="text" class="form-control" [(ngModel)]="book.author" name="author" required>
+        </div>
+        <div class="mb-3">
+            <label for="genre" class="form-label">Genre</label>
+            <input type="text" class="form-control" [(ngModel)]="book.genre" name="genre" required>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" class="form-control" [(ngModel)]="book.price" name="price" required>
+        </div>
+        <div class="mb-3">
+            <label for="publication_date" class="form-label">Publication Date</label>
+            <input type="date" class="form-control" [(ngModel)]="book.publication_date" name="publication_date" required>
+        </div>
+        <button type="submit" class="btn btn-success">Add Book</button>
+        <p *ngIf="errorMessage" class="text-danger mt-2">{{ errorMessage }}</p>
+    </form>
+</div>

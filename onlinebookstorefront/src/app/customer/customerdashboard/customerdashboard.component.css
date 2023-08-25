@@ -1,0 +1,40 @@
+/* customer-dashboard.component.css */
+.container {
+    max-width: 1200px;
+  }
+  
+  .d-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .ml-auto {
+    margin-left: auto;
+  }
+  
+  button {
+    min-width: 150px; /* Set a minimum width for buttons */
+  }
+  
+  button.ml-3 {
+    margin-left: 10px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  
+  .btn {
+    width: auto; /* Prevent the buttons from stretching */
+    padding: 10px 20px;
+  }
+  

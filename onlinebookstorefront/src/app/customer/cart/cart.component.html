@@ -1,0 +1,33 @@
+<app-customernav></app-customernav>
+<div *ngIf="cartItems.length > 0; else emptyCart">
+    <h2>Your Cart</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Total Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems">
+          <td>{{ item.title }}</td>
+          <td>{{ item.author }}</td>
+          <td>{{ item.genre || 'N/A' }}</td>
+          <td>${{ item.totalPrice.toFixed(2) }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="removeItemFromCart(item.book_id)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h4>Total Price: ${{ totalPrice.toFixed(2) }}</h4>
+    <button class="btn btn-success" (click)="placeOrder(cartItems)">Place Order</button>
+  </div>
+  
+  <ng-template #emptyCart>
+    <p>Your cart is empty.</p>
+  </ng-template>
+  

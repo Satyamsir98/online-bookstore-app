@@ -1,0 +1,15 @@
+.book-image {
+    max-width: 100%;
+    height: 50vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    float: right;
+  }
+  .book-details-container {
+      border: 2px solid #dee2e6; /* Adds a light gray border */
+      border-radius: 8px; /* Rounded corners */
+      padding: 20px; /* Adds space inside the border */
+      background-color: #e4dcdc; /* Light background for contrast */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    }
+  
