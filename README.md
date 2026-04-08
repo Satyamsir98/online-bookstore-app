@@ -2,25 +2,69 @@
 
 ## 📌 Overview
 
-This project is a full-stack online bookstore application that allows users to browse books, manage orders, and interact with a backend system.
+This project is a full-stack Online Bookstore Application that allows customers to browse and purchase books, while enabling bookstore owners to manage inventory and orders.
 
-It is built using a Flask backend, Angular frontend, and a database for persistent storage.
+The system is built using a Flask-based REST API backend, Angular frontend, and SQLite database with SQLAlchemy ORM.
+
+It follows a role-based architecture supporting Customers, Bookstore Owners, and Admin functionalities.
 
 ---
 
 ## 🧠 Features
 
-- User authentication and management  
-- Book catalog browsing  
-- Add to cart functionality  
-- Order management  
-- Backend API integration  
+### 👤 Customer
+
+- Browse and search books by title, author, or genre  
+- View book details, pricing, and availability  
+- Add books to cart and place orders  
+- Track order status (Placed, Shipped, Delivered)  
+- Submit ratings and reviews  
+
+---
+
+### 🏪 Bookstore Owner
+
+- Register and manage bookstore  
+- Add, update, and delete books  
+- Manage inventory  
+- Process and track orders  
+- View customer reviews  
+
+---
+
+### 🛠️ Admin (Optional)
+
+- Manage users and roles  
+- Manage bookstores  
+- Handle disputes  
+
+---
+
+## 🗄️ Database Design
+
+Entities:
+
+- Customer  
+- Bookstore Owner  
+- Books  
+- Orders  
+- Reviews  
+- Admin  
+
+Relationships:
+
+- Customers place Orders  
+- Books belong to Bookstore Owners  
+- Customers review Books  
+- Orders link Customers and Books  
 
 ---
 
 ## 🏗️ Architecture
 
-Frontend (Angular) → REST API (Flask) → Database
+Frontend (Angular)  
+→ REST APIs (Flask)  
+→ Database (SQLite with SQLAlchemy)
 
 ---
 
@@ -28,17 +72,43 @@ Frontend (Angular) → REST API (Flask) → Database
 
 - Frontend: Angular  
 - Backend: Python (Flask)  
-- Database: SQL (SQLAlchemy)  
+- Database: SQLite  
+- ORM: SQLAlchemy  
 
 ---
 
-## ▶️ Run
+## ⚙️ Functional Highlights
 
-Backend: python app.py 
-Frontend: ng serve
+- RESTful API design  
+- Role-based authorization  
+- Input validation and error handling  
+- Modular and scalable backend structure  
 
 ---
 
-## 👤 Author
+## ▶️ How to Run
 
-Satyam Rai | Python Full-Stack Developer
+### Backend
+```bash
+python app.py
+
+### Frontend
+```bash
+ng serve
+
+🎯 Use Cases
+E-commerce applications
+Online retail platforms
+Order management systems
+Role-based web applications
+
+💯 Highlights
+Full-stack implementation
+Role-based access control
+Real-world database design
+Clean architecture and modular code
+
+👤 Author
+
+Satyam Rai
+Python | Full-Stack Developer
