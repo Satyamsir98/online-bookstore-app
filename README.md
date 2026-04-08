@@ -123,4 +123,4 @@ ng serve
 ## 👤 Author
 
 Satyam Rai  
-Full Stack Developer → Data Engineer
+Full Stack Developer | Python
