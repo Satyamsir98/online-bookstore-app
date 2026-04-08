@@ -89,26 +89,38 @@ Frontend (Angular)
 ## ▶️ How to Run
 
 ### Backend
+
 ```bash
 python app.py
+```
 
 ### Frontend
+
 ```bash
 ng serve
+```
 
-🎯 Use Cases
-E-commerce applications
-Online retail platforms
-Order management systems
-Role-based web applications
+---
 
-💯 Highlights
-Full-stack implementation
-Role-based access control
-Real-world database design
-Clean architecture and modular code
+## 🎯 Use Cases
 
-👤 Author
+- E-commerce applications  
+- Online retail platforms  
+- Order management systems  
+- Role-based web applications  
 
-Satyam Rai
-Python | Full-Stack Developer
+---
+
+## 💯 Highlights
+
+- Full-stack implementation  
+- Role-based access control  
+- Real-world database design  
+- Clean architecture and modular code  
+
+---
+
+## 👤 Author
+
+Satyam Rai  
+Full Stack Developer → Data Engineer
