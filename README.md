@@ -32,7 +32,7 @@ It follows a role-based architecture supporting Customers, Bookstore Owners, and
 
 ---
 
-### 🛠️ Admin (Optional)
+### 🛠️ Admin
 
 - Manage users and roles  
 - Manage bookstores  
