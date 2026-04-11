@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Cart } from '../models/cart.model';  // Ensure this model is defined based on your backend Cart model
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  private apiUrl = 'http://localhost:5000/cartbp'; // Updated to match backend URL
+  private apiUrl = environment.apiUrl + '/cartbp'; // Updated to match backend URL
 
   constructor(private http: HttpClient) { }
 

@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Book } from '../models/book.model'; // Ensure this model is defined based on your backend Book model
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
-  private apiUrl = 'http://localhost:5000/bookbp'; // Updated to match backend URL
+  private apiUrl = environment.apiUrl + '/bookbp'; // Updated to match backend URL
 
   constructor(private http: HttpClient) { }
 

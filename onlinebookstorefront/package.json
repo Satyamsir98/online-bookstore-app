@@ -23,8 +23,7 @@
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0",
-    "@auth0/angular-jwt": "^5.1.2",
-    "angular-jwt": "github:auth0/angular-jwt"
+    "@auth0/angular-jwt": "^5.1.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.16",
