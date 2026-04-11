@@ -102,6 +102,14 @@ ng serve
 
 ---
 
+## 🌐 Live Demo
+
+The application is deployed using Surge and can be accessed here:
+
+👉 http://online-bookstore.surge.sh/
+
+---
+
 ## 🎯 Use Cases
 
 - E-commerce applications  
