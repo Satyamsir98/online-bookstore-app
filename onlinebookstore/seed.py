@@ -5,7 +5,6 @@ from datetime import date
 def seed_database(app):
     with app.app_context():
 
-        # 👇 IMPORTANT: check if already seeded
         if User.query.first():
             print("Data already exists, skipping seeding...")
             return
@@ -107,7 +106,7 @@ def seed_database(app):
         db.session.add_all([cart_item1, cart_item2, cart_item3, cart_item4])
         db.session.commit()
 
-        print("✅ Database seeded successfully!")
+        print("Database seeded successfully!")
 
 
 

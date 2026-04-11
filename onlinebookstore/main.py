@@ -3,8 +3,6 @@ from app import create_app
 from app.extensions import db
 from app.controllers import auth_controller, book_controller, order_controller, review_controller, cart_controller
 from flask_cors import CORS
-
-# 👇 Import seed
 from seed import seed_database
 
 # Create Flask app instance
@@ -14,7 +12,7 @@ app = create_app()
 with app.app_context():
     db.create_all()
 
-    # 👇 Seed only if DB empty
+    # Seed only if DB empty
     from app.models import User
     if not User.query.first():
         print("Seeding database...")
